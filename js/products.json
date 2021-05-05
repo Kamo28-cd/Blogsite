@@ -1,0 +1,70 @@
+{
+	"items": [
+	{
+		"sys": {"id": "1"},
+		"fields": {
+			"title": "MK Mercer Bag",
+			"oldprice": "",
+			"price": 12000,
+			"image": {"fields": {"file": {
+			"url":"./img_shop/shop1.jpg" }}
+			}
+		}
+	},
+	{
+		"sys": {"id": "2"},
+		"fields": {
+			"title": "The Wisdom of Life",
+			"oldprice": 2500,
+			"price": 2000,
+			"image": {"fields": {"file": {
+			"url":"./img_shop/shop2.jpg" }}
+			}
+		}
+	},
+	{
+		"sys": {"id": "3"},
+		"fields": {
+			"title": "Woolworths",
+			"oldprice": "",
+			"price": 1500,
+			"image": {"fields": {"file": {
+			"url":"./img_shop/shop3.jpg" }}
+			}
+		}
+	},
+	{
+		"sys": {"id": "4"},
+		"fields": {
+			"title": "MOW Text Book",
+			"oldprice": "",
+			"price": 700,
+			"image": {"fields": {"file": {
+			"url":"./img_shop/shop4.jpg" }}
+			}
+		}
+	},
+	{
+		"sys": {"id": "5"},
+		"fields": {
+			"title": "Shoes",
+			"oldprice": "",
+			"price": 500,
+			"image": {"fields": {"file": {
+			"url":"./img_shop/shop5.jpg" }}
+			}
+		}
+	},
+	{
+		"sys": {"id": "6"},
+		"fields": {
+			"title": "Fitness Gear",
+			"oldprice": 1500,
+			"price": 1000,
+			"image": {"fields": {"file": {
+			"url":"./img_shop/shop6.jpg" }}
+			}
+		}
+	}
+	]
+}
