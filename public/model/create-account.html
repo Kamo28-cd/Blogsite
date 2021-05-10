@@ -1,0 +1,134 @@
+<!--<!doctype html>
+<html style="height:100%">
+<head>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Create Account</title>
+<link rel="stylesheet" href="css/template-style.css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/ownstyle.css" rel="stylesheet" type="text/css">
+<link href="fontawesome/css/all.css" rel="stylesheet" type="text/css">
+<link href="css/components.css" rel="stylesheet" type="text/css">
+<link href="css/responsee.css" rel="stylesheet" type="text/css">
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/popup-box.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+<!--web-fonts-->
+<link href="//fonts.googleapis.com/css?family=Romanesco" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500,100,100italic,300,300italic,500italic,700,700italic,900,900italic,400italic" rel="stylesheet" type="text/css">
+	 
+	  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script>  
+	  <script type="text/javascript" src="js/toastalert.js"></script>  
+      <script type="text/javascript" src="js/modernizr.js"></script>
+      <script type="text/javascript" src="js/responsee.js"></script>
+         
+</head>
+
+<body>
+<div>
+<div class="padding loginbodyht center s-6 l-6 maxwidthlogin minwidthlogin boxborder">
+<div class="center iconborder loginiconwidth">
+	<i class="iconlineht text-col-aqua icon-sli-people icon3x"></i>
+</div>
+<div class="padding">
+<form class="customform" action="create-account.php" method="post">
+<div><input class="required" id="username" type="text" name="username" value="" placeholder="Username"><p /></div>
+<div><input class="required" id="email" type="email" name="email" value="" placeholder="Email"><p /></div>
+<div><input class="required" id="password" type="password" name="password" value="" placeholder="Password"><p /></div>
+
+<div><label>
+        	<select class="required" id="industry" name="industry" required>
+            	<option value="none" selected="" disabled="">Select Industry</option>
+                		<option value="Maths">Maths </option>
+						<option value="Physics">Physics</option>
+						<option value="Accounting">Accounting</option>
+                        <option value="C.A.T">C.A.T</option>
+                        <option value="Life Sciences">Life Sciences</option>
+                                
+            </select>
+        </label> <p /></div>
+        
+        
+        <div><label>
+        	<select class="required" id="grade" name="grade" required>
+            	<option value="none" selected="" disabled="">Select grade</option>
+                		<option value="12">Matric </option>
+						<option value="11">Gr 11</option>
+						<option value="10">Gr 10</option>
+                        <option value="9">Gr 9</option>
+                        <option value="8">Gr 8</option>
+                                
+            </select>
+        </label> <p /></div>
+<div><input type="button" id="createaccount" class="button-bg-aqua shake" name="createaccount" value="Create Account"></div>
+</form>
+<a href="" class="text-opacity text-size-12 center text-center" ><span>Already have an account? Click here</span></a>
+</div>
+</div>
+</div>
+
+<!-- Start of toast notifications-->
+<div class="alert" style="margin-top:0px !important;">
+	<span class="fas fa-exclamation-circle"></span> 
+	<span class="msg-a">Warning: This is a warning alert!</span>
+	
+	<span class="close-btn-alert">
+		<span class="fas fa-times"></span>
+	</span>
+
+</div>
+
+<div class="alert-success" style="margin-top:0px !important;">
+	<span class="far fa-check-circle"></span> 
+	<span class="msg-a-success">Success: You've completed this action</span>
+	
+	<span class="close-btn-alert-success">
+		<span class="fas fa-times"></span>
+	</span>
+
+</div>
+<!-- End of toast notifications-->
+<script type="text/javascript" src="js/toastalert.js"></script> 
+<script type="text/javascript">
+      		$('#createaccount').click(function() {
+						$.ajax({
+							 
+							 type: "POST",
+							 url: "api/users",
+							 processData: false,
+							 contentType:"application/json",
+							 data: '{"username": "'+ $("#username").val()+'", "email": "'+ $("#email").val()+'", "password": "'+ $("#password").val()+'", "grade": "'+ $("#grade").val()+'", "industry": "'+ $("#industry").val()+'", "first_name": "'+ $("#industry").val()+'", "last_name": "'+ $("#industry").val()+'", "user_location": "'+ $("#industry").val()+'", "works_at": "'+ $("#industry").val()+'", "acc_type": "'+ $("#industry").val()+'", "acc_mode": "'+ $("#industry").val()+'"}',
+							 success: function(r) {
+								 	//console.log(r)
+									alertText = JSON.parse(r.responseText);
+									//alertText.toString();
+									alertString = alertText.Error;
+									
+									alertFunction("success",'Success:'+alertString+'')
+									setTimeout(function() {
+										console.log("you did it");
+									},1000)
+							 },
+							 error: function(r) {
+									
+								 	
+								 	setTimeout(function() {
+										$('[data-bs-animate]').removeClass('animated' + $('[data-bs-hover-animate]').attr('data-bs-hover-animate'));}, 2000)
+										$('[data-bs-animate]').addClass('animated' + $('[data-bs-hover-animate]').attr('data-bs-hover-animate'))
+								 	//console.log(r)
+									
+									alertText = JSON.parse(r.responseText);
+									//alertText.toString();
+									alertString = alertText.Error;
+									
+									alertFunction("warning",'Error:'+alertString+'')
+									
+								 }
+						});
+			});
+      </script>
+</body>
+</html>-->

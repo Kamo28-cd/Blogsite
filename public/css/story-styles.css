@@ -1,0 +1,436 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: white;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+/* Messages about browser width. */
+.warning-message,
+.success-message {
+	display: none;
+	position: fixed;
+	bottom: 16px;
+	left: 16px;
+	z-index: 100;
+	font-size: 16px;
+	color: white;
+}
+
+.success-message {
+	display: block;
+	opacity: 0;
+	font-size: 36px;
+}
+
+.success-message.is-in {
+	opacity: 0;
+	animation-name: fade-out;
+	animation-duration: 3s;
+}
+
+@keyframes fade-out {
+	0% { opacity: 1; }
+	80% { opacity: 1; }
+	100% { display: none; opacity: 0;  }
+}
+
+@media (min-width: 1000px) {
+	.warning-message {
+		display: block;
+	}
+	.ios .warning-message {
+		display: none;
+	}
+}
+
+
+/* Stories */
+
+.stories-wrapper {
+  width: 100vw;
+  height: 100vh;
+  perspective: 400px;
+  overflow: hidden;
+  background:#000;
+}
+
+.stories {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(-50vw);
+}
+
+.stories.is-closed {
+	transition: transform 0.25s ease-out, opacity 0.05s ease-out 0.20s;
+	opacity: 0;
+}
+
+/* Story (single) */
+
+.story {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+}
+
+.story__cover {
+	z-index: 20;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 1);
+}
+
+.story__top {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0));
+}
+
+.story__details {
+	display: flex;
+	align-items: center;
+	margin: 16px 0 0 16px;
+}
+
+.story__avatar {
+	width: 40px;
+	height: 40px;
+	margin-right: 8px;
+	border-radius: 50%;
+	background-size: cover;
+}
+
+.story__user {
+	margin-right: 8px;
+	color: white;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+
+.story__time {
+	color: white;
+	opacity: 0.5;
+	letter-spacing: 0.02em;
+}
+
+.story__bottom {
+	z-index: 100;
+    	position: absolute;
+    	bottom: 20px;
+	left:15%;
+	display:inline-block;
+	margin:10px auto;
+    	width: 80%;
+    	border: solid 2px #fff;
+    	border-radius: 35px;
+    	
+	
+}
+.story_like {
+	
+	z-index: 100;
+    	position: absolute;
+    	bottom: 20px;
+    	display: inline-block;
+    	
+    	margin: 22px 6px;
+    		
+}
+.story_like i {
+	color:white;
+	transition:1s ease-in;
+	
+}
+
+.story_bottom-container {
+	padding: 0 10px;
+    	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8));
+    	position: absolute;
+    	bottom: 0;
+    	width: 100%;
+    	z-index: 100;
+    	height: 20%;
+}
+.active-emoji {
+	color:red !important;
+}
+
+.emoji-effect .emoji.active-emoji {
+  
+	animation-name: fadeOut;
+  
+	animation-iteration-count: 1;
+  
+	animation-fill-mode: forwards;
+  transition: all 0.3s ease-in;
+
+}
+
+@-moz-keyframes fadeOut {
+  
+	0% {
+    
+		opacity: 1;
+    
+		transform: translateY(0px);
+  
+	}
+  100% {
+    
+		opacity: 0;
+    
+		transform: translateY(-70vh);
+
+		  
+	}
+
+}
+
+@-webkit-keyframes fadeOut {
+ 
+	 0% {
+    
+		opacity: 1;
+    
+		transform: translateY(0px);
+  
+	}
+  100% {
+    
+		opacity: 0;
+    
+		transform: translateY(-70vh);
+		
+
+  
+	}
+
+}
+
+@-o-keyframes fadeOut {
+  
+	0% {
+    
+		opacity: 1;
+    
+		transform: translateY(0px);
+  
+	}
+  100% {
+    
+		opacity: 0;
+    
+		transform: translateY(-70vh);
+
+		
+  
+	}
+
+}
+
+@keyframes fadeOut {
+  
+	0% {
+    
+		opacity: 1;
+    
+		transform: translateY(0px);
+  
+	}
+  100% {
+    
+		opacity: 0;
+    
+		transform: translateY(-70vh);
+
+		transition: all 1s ease-in;
+  
+	}
+
+}
+
+/* Feature not implemented */
+.story__send-input {
+	display: inline-block;
+	padding: 16px;
+	color: white;
+	font-size: 16px;
+	width: 80%;
+	text-indent:25px;
+	border:unset;
+	background:transparent;
+}
+.story_reply-btn {
+	display: inline-block;
+    	position: absolute;
+    	right: 25px;
+    	top: 25%;
+}
+.story_reply-btn i{
+	color: white;
+    	/*transform: rotate(20deg);*/
+}
+
+.story__video {
+	/* Make video to at least 100% wide and tall */
+	min-width: 100%;
+	min-height: 100%;
+
+	/* Setting width & height to auto prevents the browser from stretching or squishing the video */
+	width: auto;
+	height: auto;
+
+	/* Center the video */
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* For iOS, which does not allow inline video playing, we show a static image. */
+.story__image {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+/* Feed */
+
+.feed {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.feed__cover {
+	z-index: 20;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.feed__cover.is-hidden {
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+.feed__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin-bottom: 60px;
+	font-size: 12px;
+    color: #9b9b9b;
+    text-align: center;
+}
+
+.reload-icon {
+	display: block;
+	width: 30px;
+	margin-top: 10px;
+	stroke: red;
+}
+
+.reload-icon path{
+	stroke: #bbb;
+}
+
+.reload-icon polygon {
+	fill: #bbb;
+	stroke: #bbb;
+}
+
+.header {
+	height: 48px;
+	border-bottom: 1px solid #ddd;
+	background-color: #f9f9f9;
+}
+
+/* Feed - Story Bar (row of circle avatars) */
+
+.story-bar {
+	display: flex;
+	height: 122px;
+	padding: 12px 16px;
+	border-bottom: 1px solid #eee;
+	background-color: #f9f9f9;
+}
+
+.story-bar__user {
+	display: inline-block;
+}
+
+.story-bar__user.bounce {
+	animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.18s;
+	animation-name: scale-down-bounce;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes scale-down-bounce {
+	0% { transform: scale(1) }
+	50% { transform: scale(0.8) }
+	100% { transform: scale(1)) }
+}
+
+.story-bar__user-avatar {
+	width: 56px;
+	height: 56px;
+	margin: 0 8px 4px 8px;
+	border-radius: 50%;
+	border: 4px solid white;
+	background-size: cover;
+	box-shadow: 0 0 1px 0 #999;
+}
+
+.story-bar__user-name {
+	width: 64px;
+	margin: 0 4px;
+	white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.tab-bar {
+	position: absolute;
+	bottom: 0;
+	height: 48px;
+	width: 100%;
+	border-top: 1px solid #eee;
+	background-color: #f9f9f9;
+}

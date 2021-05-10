@@ -1,0 +1,282 @@
+/*
+Author: Designmaz
+Author URL: https://www.designmaz.net
+License URL: https://www.designmaz.net/licence/
+*/
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(145, 150, 123);
+    position: relative;
+}
+/*-- main --*/
+.main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4em 0 7em;
+}
+h1 {
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Romanesco', cursive;
+    text-align: center;
+    margin-bottom: 0.8em;
+    letter-spacing: 3px;
+}
+/*--calender--*/
+.calnder {
+  padding: 0;
+}
+.calwidth {
+	width: 100% !important;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+.cal1 .clndr .clndr-table tr .day.today.event .day-contents {
+  color: #fff !important;
+}
+.clndr-top {
+  background-color: #f5c51d;
+  padding: 2em;
+}
+.column_right_grid.calender {
+	background-color: #fff;
+	padding: 2.5em 0em 1.5em;
+}
+.bullet {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: block;
+	width: 5px;
+	border-radius: 50%;
+	height: 5px;
+	background: #ff6b6b;
+}
+
+.clndr-event {
+    text-align: center;
+}
+.clndr-event a {
+    font-size: 0.9em;
+    background-color: #1DDCB6;
+    padding: 0.6em 1.2em;
+    color: #fff;
+    border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border: 1px solid #1DDCB6;
+	transition: .5s all;
+	-webkit-transition: .5s all;
+	-moz-transition: .5s all;
+	-ms-transition: .5s all;
+	-o-transition: .5s all;
+}
+.clndr-event a:hover {
+    color: #1DDCB6;
+    background-color: #fff;
+}
+a.popup-with-zoom-anim:focus {
+    outline: none;
+}
+/*--//calender--*/
+/*--pop-up--*/
+.event-text input[type="text"],.event-text input[type="date"],.event-text textarea  {
+    display: block;
+    color: #555;
+    outline: none;
+    width: 95%;
+    font-size: 0.9em;
+    padding: 0.6em;
+    margin-bottom: 1em;
+    -webkit-appearance: none;
+    background: none;
+    border: 1px solid #DEDEDE;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+	font-family: 'Roboto', sans-serif;
+}
+.event-text textarea  {
+	min-height:5em;
+	resize: none;
+}
+.event-text input[type="submit"] {
+    outline: none;
+    color: #fff;
+    background: #1DDCB6;
+    width: 36%;
+    padding: .6em 0;
+    font-size: 0.9em;
+    margin: 10px 2px 0px 0px;
+    -webkit-appearance: none;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    border: 1px solid #1DDCB6;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.event-text input[type="submit"]:hover {
+    background: #fff;
+    color: #1DDCB6;
+}
+/*--//pop-up--*/
+/*--copy-right--*/
+.copy-right {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	margin-bottom: 2em;
+}
+.copy-right p {
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.6em;
+    margin: 0 1em;
+}
+.copy-right p a {
+    color: rgba(255, 255, 255, 0.64);
+	display: inline-block;
+	font-size: 1em;
+    border-bottom: 1px solid transparent;
+}
+.copy-right p a:hover {
+    color: #1DDCB6;
+    border-color: #1DDCB6;
+}
+/*---- responsive-design -----*/
+@media(max-width:1440px){
+}
+@media(max-width:1366px){
+}
+@media(max-width:1280px){
+.main {
+    width: 100%;
+}
+}
+@media(max-width:1080px){
+.main {
+    width: 100%;
+}
+}
+@media(max-width:1024px){
+}
+@media(max-width:991px){
+h1 {
+    font-size: 2.8em;
+}
+.clndr .clndr-controls {
+    padding: 2em 0 !important;
+	margin: 1.5em 0 1em !important;
+}
+.clndr .clndr-controls .month {
+    font-size: 1.2em;
+}
+}
+@media(max-width:768px){
+.column_right_grid.calender {
+    padding: 2em 2em 1em;
+}
+.main {
+    width: 100%;
+}
+}
+@media(max-width:640px){
+.main {
+    width: 100%;
+}
+h1 {
+    font-size: 2.5em;
+}
+.clndr .clndr-controls .month {
+    font-size: 1.1em !important;
+}
+.clndr .clndr-controls .clndr-control-button .clndr-previous-button {
+    top: 43% !important;
+}
+.clndr .clndr-controls .clndr-control-button .clndr-next-button {
+    top: 43% !important;
+}
+.copy-right p {
+    font-size: 0.9em;
+}
+}
+@media(max-width:480px){
+.main {
+    width: 100%;
+	padding: 2em 0 6em;
+}
+.clndr-event a {
+    font-size: 0.8em;
+    padding: 0.7em 1.2em;
+}
+.clndr .clndr-controls {
+    padding: 1.8em 0 !important;
+    margin: 1.5em 0 0.8em !important;
+}
+}
+@media(max-width:320px){
+.main {
+    width: 100%;
+}
+h1 {
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+.clndr .clndr-controls .month {
+    font-size: 0.9em !important;
+}
+.clndr .clndr-controls {
+    padding: 1.3em 0 !important;
+    margin: 1.2em 0 0.6em !important;
+}
+.copy-right {
+    margin-bottom: 1em;
+}
+.copy-right p {
+    font-size: 0.8em;
+}
+.event-text input[type="text"], .event-text input[type="date"], .event-text textarea {
+    width: 92%;
+    font-size: 0.8em;
+}
+.event-text input[type="submit"] {
+    width: 46%;
+    padding: .5em 0;
+    font-size: 0.8em;
+}
+}
+/*--//responsive-design---*/

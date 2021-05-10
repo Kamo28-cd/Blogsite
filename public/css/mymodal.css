@@ -1,0 +1,39 @@
+#mymodal-root {
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  left : 0;
+  top: 0;
+  width: 0px;
+  height : 0px;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
+}
+
+#mymodal-root.visible {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
+}
+
+.mymodal {
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+  
+}
+.bg-mymodal{
+	width: 101% !important;
+	height: 200% !important;
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	top: -45px !important;
+	/* [disabled]display: flex; */
+	z-index: 10;
+	/*-webkit-transition: all 0.5s ease !important;*/
+	/*-moz-transition: all 0.5s ease !important;*/
+	/*transition: all 0.5s ease !important;*/
+	
+	}
