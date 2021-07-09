@@ -1,3 +1,21 @@
+## Blogsite
+
+This Blogsite Restful API for backend scripting and takes advantage of Laravel's MVC architecture
+to achieve strong functionality in MVC architecture.
+The blogsite allows users to do everything a normal blogsite such as Facebook, Twitter or Instagram does using
+Basic technologies. It is easy to integrate into different projects and uses Laravel's routing to allow for a Single Client Side entry point
+
+Technologies used:
+Languages: HTML, CSS, JavaScript, PHP, MySQL
+
+Libraries used: JQuery
+
+Frameworks used: Laravel
+
+Architecture: MVC, Rest API
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
