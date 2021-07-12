@@ -14,6 +14,13 @@ Frameworks used: Laravel
 
 Architecture: MVC, Rest API
 
+# Licence
+All files, folders and subfolders in this repository excluding the images, popular libaries and frameworks are original work built, 
+developed and designed, by the author, and developerKamo28-cd
+CopyRight you are allowed to view and read only.
+Commercial use not permitted reposession not permitted
+Should you require to use this work for commercial purposes please contact the owner of this repository
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
