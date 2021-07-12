@@ -14,7 +14,7 @@ Frameworks used: Laravel
 
 Architecture: MVC, Rest API
 
-# Licence
+## Licence
 All files, folders and subfolders in this repository excluding the images, popular libaries and frameworks are original work built, 
 developed and designed, by the author, and developerKamo28-cd
 CopyRight you are allowed to view and read only.
